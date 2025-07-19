@@ -8,9 +8,11 @@
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="173*"/>
-            <ColumnDefinition Width="227*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,45,0,0" TextWrapping="Wrap" 
+                 Text="{Binding DefaultConnection, Mode=OneWay}" IsReadOnly="True" VerticalAlignment="Top" Width="764"/>
+        <Label Content="Connection string" HorizontalAlignment="Left" Height="25" Margin="10,15,0,0" VerticalAlignment="Top" Width="112"/>
 
     </Grid>
 </Window>

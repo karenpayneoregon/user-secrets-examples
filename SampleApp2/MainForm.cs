@@ -1,4 +1,5 @@
 
+using System.Diagnostics;
 using SecretsLibrary1;
 using SecretsModelsLibrary.Models;
 
@@ -15,6 +16,9 @@ public partial class MainForm : Form
 
         var mailSettings = SecretApplicationSettingReader
             .Instance.ReadSection<MailSettings>(nameof(MailSettings));
+
+        Debugger.Break();
+
     }
 
 }
