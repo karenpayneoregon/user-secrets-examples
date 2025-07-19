@@ -2,5 +2,5 @@
 
 For showing how to use user secrets. 
 
-- Has 1 Console application project currently.
+- Projects `Sample1`, `Sample2` and `Sample3` share the same user secrets in `SecretsLibrary1`.
 - Will add more projects later.

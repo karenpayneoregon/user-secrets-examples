@@ -1,7 +1,4 @@
-﻿using SecretsLibrary1;
-using SecretsModelsLibrary.Models;
-using System.ComponentModel;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,28 +22,7 @@ public partial class MainWindow : Window
         
         InitializeComponent();
 
-        DataContext = new SecretDataViewModel();
+        DataContext = new SecretDataViewModel(); ;
 
     }
 }
-
-public class SecretData
-{
-    public string DefaultConnection => SecretApplicationSettingReader
-        .Instance.ReadProperty<string>(nameof(Connectionstrings), nameof(Connectionstrings.DefaultConnection));
-    public MailSettings MailSettings => SecretApplicationSettingReader
-        .Instance.ReadSection<MailSettings>(nameof(MailSettings));
-}
-
-public class SecretDataViewModel : INotifyPropertyChanged
-{
-    private readonly SecretData _secretData;
-
-    public SecretDataViewModel() => _secretData = new SecretData();
-
-    public string DefaultConnection => _secretData.DefaultConnection;
-
-    // Optional: Raise PropertyChanged if needed in future
-    public event PropertyChangedEventHandler PropertyChanged;
-}
-

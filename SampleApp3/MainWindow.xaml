@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SampleApp3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="User secrets" Height="226" Width="571" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,45,0,0" TextWrapping="Wrap" 
-                 Text="{Binding DefaultConnection, Mode=OneWay}" IsReadOnly="True" VerticalAlignment="Top" Width="764"/>
-        <Label Content="Connection string" HorizontalAlignment="Left" Height="25" Margin="10,15,0,0" VerticalAlignment="Top" Width="112"/>
+        <TextBox HorizontalAlignment="Center" Height="24" Margin="0,45,0,0" TextWrapping="Wrap" 
+                 Text="{Binding DefaultConnection, Mode=OneWay}" IsReadOnly="True" VerticalAlignment="Top" Width="551"/>
+        <Label Content="Connection string" FontWeight="Bold" HorizontalAlignment="Left" Height="25" Margin="1,15,0,0" VerticalAlignment="Top" Width="112"/>
+        <Label Content="From Address" FontWeight="Bold" HorizontalAlignment="Left" Height="26" Margin="7,82,0,0" VerticalAlignment="Top" Width="129"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="12,114,0,0" TextWrapping="Wrap" Text="{Binding FromAddress, Mode=TwoWay}" VerticalAlignment="Top" Width="453"/>
 
     </Grid>
 </Window>

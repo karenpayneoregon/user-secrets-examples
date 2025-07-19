@@ -1,12 +1,5 @@
 # User Secrets for this project
 
-```json
-{
-  "ConnectionStrings:DefaultConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EF.NotesDatabase;Integrated Security=True",
-  "MailSettings:FromAddress": "FromAddress",
-  "MailSettings:Host": "SomeHost",
-  "MailSettings:Port": "25",
-  "MailSettings:TimeOut": "3000",
-  "MailSettings:PickupFolder": "MailDrop"
-}
-```
+Come from `SecretsLibrary1` project.
+
+[User Secrets](../SecretsLibrary1/UserSecrets.md)
