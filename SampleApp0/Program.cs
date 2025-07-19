@@ -1,13 +1,12 @@
-﻿using SecretsLibrary1;
-using SecretsModelsLibrary.Models;
+﻿using SampleApp0.Classes;
+using SampleApp0.Models;
 
-namespace SampleApp1;
+namespace SampleApp0;
 
 internal partial class Program
 {
     static void Main(string[] args)
     {
-
         var connectionString = SecretApplicationSettingReader
             .Instance.ReadProperty<string>(nameof(Connectionstrings), nameof(Connectionstrings.DefaultConnection));
 
@@ -16,7 +15,7 @@ internal partial class Program
 
         var helpDesk = SecretApplicationSettingReader.Instance.HelpDesk;
 
-        
+
         AnsiConsole.MarkupLine($"[bold yellow]   Connection String:[/] {connectionString}");
 
         AnsiConsole.MarkupLine($"[bold green1]  Mail Settings From:[/] {mailSettings.FromAddress}");

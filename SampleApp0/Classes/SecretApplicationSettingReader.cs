@@ -1,9 +1,9 @@
 ﻿#nullable disable
-using Microsoft.Extensions.Configuration;
 using System.Reflection;
-using SecretsModelsLibrary.Models;
+using Microsoft.Extensions.Configuration;
+using SampleApp0.Models;
 
-namespace SecretsLibrary1;
+namespace SampleApp0.Classes;
 public sealed class SecretApplicationSettingReader
 {
     private static readonly Lazy<SecretApplicationSettingReader> _instance = new(() => new());
