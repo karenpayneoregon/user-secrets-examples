@@ -1,0 +1,1 @@
+This is SecretsLibrary1 and SecretsModalLibrary1 merged together which can be used as an NuGet package.
