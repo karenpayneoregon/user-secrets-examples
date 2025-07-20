@@ -1,5 +1,6 @@
 ﻿using SampleApp0.Classes;
 using SampleApp0.Models;
+using SecretsUtilities;
 
 namespace SampleApp0;
 
@@ -7,6 +8,8 @@ internal partial class Program
 {
     static void Main(string[] args)
     {
+
+
         var connectionString = SecretApplicationSettingReader
             .Instance.ReadProperty<string>(nameof(Connectionstrings), nameof(Connectionstrings.DefaultConnection));
 
@@ -30,4 +33,5 @@ internal partial class Program
         AnsiConsole.MarkupLine("[yellow]Exit[/]");
         Console.ReadLine();
     }
+
 }
