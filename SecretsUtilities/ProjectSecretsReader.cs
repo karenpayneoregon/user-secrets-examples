@@ -37,6 +37,16 @@ public class ProjectSecretsReader
 
     }
 
+    /// <summary>
+    /// Gets or sets a value indicating whether the <see cref="ProjectSecretsReader"/> should continue processing.
+    /// </summary>
+    /// <value>
+    /// <c>true</c> if the processing should continue; otherwise, <c>false</c>.
+    /// </value>
+    /// <remarks>
+    /// This property is initialized based on the validity of the provided .csproj file path.
+    /// If the path is null, empty, or the file does not exist, this property is set to <c>false</c>.
+    /// </remarks>
     public bool Continue { get; set; }
 
     /// <summary>

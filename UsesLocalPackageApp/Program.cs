@@ -15,6 +15,9 @@ internal partial class Program
 
         var helpDesk = SecretApplicationSettingReader.Instance.HelpDesk;
 
+        var layout = SecretApplicationSettingReader
+            .Instance.ReadSection<Models.Layout>(nameof(Models.Layout));
+
 
         AnsiConsole.MarkupLine($"[bold yellow]   Connection String:[/] {connectionString}");
 
@@ -25,9 +28,11 @@ internal partial class Program
         AnsiConsole.MarkupLine($"[bold hotpink2]     Help Desk Phone:[/] {helpDesk.Phone}");
         AnsiConsole.MarkupLine($"[bold hotpink2]     Help Desk Email:[/] {helpDesk.Email}");
 
-        Console.WriteLine();
+        // not in secrets
+        AnsiConsole.MarkupLine($"[bold blue]              Header:[/] {layout.Header}");
+        AnsiConsole.MarkupLine($"[bold blue]               Title:[/] {layout.Title}");
+        AnsiConsole.MarkupLine($"[bold blue]              Footer:[/] {layout.Footer}");
 
-        AnsiConsole.MarkupLine("[yellow]Exit[/]");
         Console.ReadLine();
     }
 }
